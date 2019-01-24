@@ -7,8 +7,11 @@ Base = declarative_base()
 
 
 class Post(Base):
-    __tablename__ = "post"
-    id = Column(Integer, primary_key = True)
-    recipe = Column(String)
-    food = Column(String)
+    __tablename__ = "Post"
+    id_table = Column(Integer, primary_key = True)
+    post_string = Column(String)
 
+    def __repr__(self):
+        return ("{} \n "
+            "\n").format(
+self.post_string)

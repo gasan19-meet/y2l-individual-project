@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	 body{background-color:lightgreen;}
+	 h1{color: white;
+		text-align:center;
+		text-transform:uppercase;
+		text-shadow:-1px 0 black,0 1px black, 1px 0 black, 0 -1px black;
+
+		padding:20px;}
+	 p{color:grey;
+	 padding-top:60px;
+		padding-bottom:60px;
+		padding-right:60px;
+		padding-left:60px;}
+	 </style>
+</head>
+<body>
+<h1> IT'S STEAK TIME</h1>
+<p>    Let the steak sit at room temperature for 30 minutes.  Season the steak generously on each side with salt and pepper.  In a cast-iron skillet with 1 Tablespoon of oil over high heat add the steaks to the pan and sear each side 3 minutes or until brown.
+
+
+
+    Reduce heat to medium low.  Cook the steak to desired doneness.  Rare = 125 degrees, Medium Rare = 135 degrees, Medium = 145 degrees, Medium Well = 150 degrees and Well Done = 160 degrees.  Some say to flip only once while cooking, I like to flip mine a few times.
+
+
+    Right before serving the steak slather the butter compound on top and let it melt into the tender steak.  This gives it a nice finishing touch and adds such great flavor.</p>
+<p>
+{%for steak in steaks%}
+<br>
+<span>recipe:</span>
+<br>
+<span>{{steak.recipe}}</span>
+<br>
+
+
+
+{%endfor%}
+
+
+
+</p>
+<form method="POST" action = '/steak'>
+		<input type="text" name="recipe" placeholder="your recipe">
+		<br>
+		<input type="submit" value="post">
+
+
+
+<!-- </p>
+        <form action="/steak_page", method="POST">
+          <br>
+        <input class="form-control" size="70" height="200" maxlength="500" type="text" placeholder="Enter your post" name="recipe" required>
+          <br>
+        <button type="submit">Submit </button>
+  	      <br>
+  	      <br>
+      </div>
+</form> -->
+</body>
+</html>
